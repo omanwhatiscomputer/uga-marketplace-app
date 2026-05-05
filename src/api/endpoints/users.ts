@@ -30,3 +30,7 @@ export async function unsubscribeFromProduct(productId: string): Promise<void> {
 export async function savePushToken(token: string): Promise<void> {
     await apiClient.patch("/user/push-token", { expoPushToken: token });
 }
+
+export async function updateUser(mobileNumber: string): Promise<void> {
+    await apiClient.patch("/user", { mobileNumber });
+}
